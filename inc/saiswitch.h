@@ -3680,6 +3680,14 @@ typedef enum _sai_switch_attr_t
     SAI_SWITCH_ATTR_LINK_UP_DEBOUNCE_TIMEOUT_INTEVALS,
 
     /**
+     * @brief Tunnel user-based metadata range
+     *
+     * @type sai_u32_range_t
+     * @flags READ_ONLY
+     */
+    SAI_SWITCH_ATTR_TUNNEL_USER_META_DATA_RANGE,
+
+    /**
      * @brief End of attributes
      */
     SAI_SWITCH_ATTR_END,

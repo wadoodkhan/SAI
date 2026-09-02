@@ -1693,9 +1693,18 @@ typedef enum _sai_acl_table_attr_t
     SAI_ACL_TABLE_ATTR_FIELD_ROUTE_DST = SAI_ACL_TABLE_ATTR_FIELD_START + 0x169,
 
     /**
+     * @brief Tunnel user metadata
+     *
+     * @type bool
+     * @flags CREATE_ONLY
+     * @default false
+     */
+    SAI_ACL_TABLE_ATTR_FIELD_TUNNEL_USER_META = SAI_ACL_TABLE_ATTR_FIELD_START + 0x16a,
+
+    /**
      * @brief End of ACL Table Match Field
      */
-    SAI_ACL_TABLE_ATTR_FIELD_END = SAI_ACL_TABLE_ATTR_FIELD_ROUTE_DST,
+    SAI_ACL_TABLE_ATTR_FIELD_END = SAI_ACL_TABLE_ATTR_FIELD_TUNNEL_USER_META,
 
     /**
      * @brief ACL table entries associated with this table.
@@ -2912,9 +2921,21 @@ typedef enum _sai_acl_entry_attr_t
     SAI_ACL_ENTRY_ATTR_FIELD_ROUTE_DST = SAI_ACL_ENTRY_ATTR_FIELD_START + 0x169,
 
     /**
+     * @brief Tunnel user metadata
+     *
+     * Value must be in the range defined in
+     * #SAI_SWITCH_ATTR_TUNNEL_USER_META_DATA_RANGE
+     *
+     * @type sai_acl_field_data_t sai_uint32_t
+     * @flags CREATE_AND_SET
+     * @default disabled
+     */
+    SAI_ACL_ENTRY_ATTR_FIELD_TUNNEL_USER_META = SAI_ACL_ENTRY_ATTR_FIELD_START + 0x16a,
+
+    /**
      * @brief End of Rule Match Fields
      */
-    SAI_ACL_ENTRY_ATTR_FIELD_END = SAI_ACL_ENTRY_ATTR_FIELD_ROUTE_DST,
+    SAI_ACL_ENTRY_ATTR_FIELD_END = SAI_ACL_ENTRY_ATTR_FIELD_TUNNEL_USER_META,
 
     /*
      * Actions [sai_acl_action_data_t]

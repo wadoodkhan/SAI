@@ -826,6 +826,17 @@ typedef enum _sai_tunnel_attr_t
     SAI_TUNNEL_ATTR_SELECTIVE_COUNTER_LIST,
 
     /**
+     * @brief User-based metadata for Tunnel
+     *
+     * Value Range #SAI_SWITCH_ATTR_TUNNEL_USER_META_DATA_RANGE
+     *
+     * @type sai_uint32_t
+     * @flags CREATE_AND_SET
+     * @default 0
+     */
+    SAI_TUNNEL_ATTR_META_DATA,
+
+    /**
      * @brief End of attributes
      */
     SAI_TUNNEL_ATTR_END,
