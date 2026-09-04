@@ -110,6 +110,8 @@ typedef enum _sai_prefix_compression_entry_attr_t
     /**
      * @brief Prefix Compression entry meta data
      *
+     * Value Range #SAI_SWITCH_ATTR_PREFIX_COMPRESSION_META_DATA_RANGE
+     *
      * @type sai_uint32_t
      * @flags MANDATORY_ON_CREATE | CREATE_AND_SET
      */

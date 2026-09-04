@@ -2805,6 +2805,9 @@ typedef enum _sai_acl_entry_attr_t
     /**
      * @brief SRC META data
      *
+     * Value must be in the range defined in
+     * #SAI_SWITCH_ATTR_PREFIX_COMPRESSION_META_DATA_RANGE
+     *
      * @type sai_acl_field_data_t sai_uint32_t
      * @flags CREATE_AND_SET
      * @default disabled
@@ -2813,6 +2816,9 @@ typedef enum _sai_acl_entry_attr_t
 
     /**
      * @brief DST META data
+     *
+     * Value must be in the range defined in
+     * #SAI_SWITCH_ATTR_PREFIX_COMPRESSION_META_DATA_RANGE
      *
      * @type sai_acl_field_data_t sai_uint32_t
      * @flags CREATE_AND_SET
