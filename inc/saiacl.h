@@ -1793,9 +1793,49 @@ typedef enum _sai_acl_table_attr_t
     SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_DST_IPV6 = SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_START + 1,
 
     /**
+     * @brief Src IPv4 Valid bits
+     *
+     * @type sai_acl_field_data_mask_t sai_ip4_t
+     * @flags CREATE_ONLY
+     * @default 0xffffffff
+     * @validonly SAI_ACL_TABLE_ATTR_FIELD_SRC_IP == true
+     */
+    SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_SRC_IP = SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_START + 2,
+
+    /**
+     * @brief Dst IPv4 Valid bits
+     *
+     * @type sai_acl_field_data_mask_t sai_ip4_t
+     * @flags CREATE_ONLY
+     * @default 0xffffffff
+     * @validonly SAI_ACL_TABLE_ATTR_FIELD_DST_IP == true
+     */
+    SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_DST_IP = SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_START + 3,
+
+    /**
+     * @brief L4 Source Port Valid bits
+     *
+     * @type sai_acl_field_data_mask_t sai_uint16_t
+     * @flags CREATE_ONLY
+     * @default 0xffff
+     * @validonly SAI_ACL_TABLE_ATTR_FIELD_L4_SRC_PORT == true
+     */
+    SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_L4_SRC_PORT = SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_START + 4,
+
+    /**
+     * @brief L4 Destination Port Valid bits
+     *
+     * @type sai_acl_field_data_mask_t sai_uint16_t
+     * @flags CREATE_ONLY
+     * @default 0xffff
+     * @validonly SAI_ACL_TABLE_ATTR_FIELD_L4_DST_PORT == true
+     */
+    SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_L4_DST_PORT = SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_START + 5,
+
+    /**
      * @brief End of Table Match Field Mask
      */
-    SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_END = SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_DST_IPV6,
+    SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_END = SAI_ACL_TABLE_ATTR_FIELD_VALID_BITS_L4_DST_PORT,
 
     /**
      * @brief End of ACL Table attributes
